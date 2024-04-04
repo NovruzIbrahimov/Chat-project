@@ -1,0 +1,123 @@
+.welcome-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  background-image: url("path/to/your/background/image.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.welcome-page-slice img.logo-logo {
+  max-width: 100px;
+  animation: bounce 2s ease infinite alternate;
+  background-color: transparent;
+  border: none;
+}
+
+h1.text{
+  color: #db6a26;
+}
+
+p.text-p{
+  color: #14997e;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button.btn.login-button {
+  color: #f6b825;
+}
+
+button.btn.register-button {
+  color: #f6b825;
+}
+
+.btn {
+  width: 180px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.btn:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.btn:active {
+  color: #000;
+}
+
+.btn:active:after {
+  background: transparent;
+}
+
+.btn:hover:before {
+  opacity: 1;
+}
+
+.btn:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #494546;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
